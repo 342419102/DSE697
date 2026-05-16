@@ -1,0 +1,4 @@
+﻿task_group,total,correct,accuracy
+behavior_count,1140,289,0.2535
+behavior_presence,1140,405,0.3553
+total_count,380,87,0.2289

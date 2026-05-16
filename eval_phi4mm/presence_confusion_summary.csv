@@ -1,0 +1,7 @@
+﻿behavior,gt_answer,pred_answer,total
+drinking,No,Yes,264
+drinking,Yes,Yes,116
+feeding,No,Yes,226
+feeding,Yes,Yes,154
+perching,No,Yes,245
+perching,Yes,Yes,135

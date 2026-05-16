@@ -1,0 +1,2 @@
+﻿model_result_file,total,correct,accuracy,invalid_prediction
+results_llava_onevision_7b.jsonl,2660,1514,0.5692,0

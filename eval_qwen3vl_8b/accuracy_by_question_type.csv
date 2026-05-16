@@ -1,0 +1,8 @@
+﻿question_type,total,correct,accuracy
+drinking_count,380,242,0.6368
+drinking_presence,380,242,0.6368
+feeding_count,380,182,0.4789
+feeding_presence,380,192,0.5053
+perching_count,380,247,0.65
+perching_presence,380,250,0.6579
+total_count,380,22,0.0579

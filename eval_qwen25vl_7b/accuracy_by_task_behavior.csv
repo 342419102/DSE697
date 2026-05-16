@@ -1,0 +1,8 @@
+﻿task_group,behavior,total,correct,accuracy
+behavior_count,drinking,380,160,0.4211
+behavior_count,feeding,380,104,0.2737
+behavior_count,perching,380,212,0.5579
+behavior_presence,drinking,380,222,0.5842
+behavior_presence,feeding,380,193,0.5079
+behavior_presence,perching,380,204,0.5368
+total_count,all,380,16,0.0421

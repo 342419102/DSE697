@@ -1,0 +1,8 @@
+﻿task_group,gt_count_bin,total,correct,accuracy
+behavior_count,0,735,391,0.532
+behavior_count,1,272,49,0.1801
+behavior_count,2,83,6,0.0723
+behavior_count,3,34,18,0.5294
+behavior_count,>=4,16,12,0.75
+total_count,0,1,1,1.0
+total_count,>=4,379,15,0.0396

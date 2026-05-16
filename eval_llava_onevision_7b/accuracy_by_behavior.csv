@@ -1,0 +1,5 @@
+﻿behavior,total,correct,accuracy
+all,380,70,0.1842
+drinking,760,473,0.6224
+feeding,760,501,0.6592
+perching,760,470,0.6184

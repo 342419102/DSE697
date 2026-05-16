@@ -1,0 +1,16 @@
+﻿question_type,pred_letter,total
+drinking_count,A,374
+drinking_count,B,2
+drinking_count,C,1
+drinking_count,D,3
+drinking_presence,A,380
+feeding_count,A,370
+feeding_count,B,5
+feeding_count,C,5
+feeding_presence,A,380
+perching_count,A,373
+perching_count,B,2
+perching_count,C,5
+perching_presence,A,380
+total_count,A,379
+total_count,D,1

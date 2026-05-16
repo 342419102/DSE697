@@ -1,0 +1,2 @@
+﻿model_result_file,total,correct,accuracy,invalid_prediction
+test_glm41v_9b_thinking.jsonl,2660,547,0.2056,706

@@ -1,0 +1,2 @@
+﻿model_result_file,total,correct,accuracy,invalid_prediction
+results_qwen3vl_8b.jsonl,2660,1377,0.5177,0
