@@ -1,0 +1,601 @@
+qwen3vl_8b (vlm_base)
+qwen25vl_7b (vlm_base)
+llava_onevision_7b (vlm_base)
+internvl25_8b (internvl25)
+internvl3_5_8b (internvl35)
+minicpm_v26 (minicpm26)
+Molmo-7B-D-0924 (molmo)
+Ovis2.5-9B (ovis25)
+glm-4v-9b (glm4v)
+GLM-4.1V-9B-Thinking (glm41v)
+MiMo-VL-7B-RL-2508 (vlm_base)
+Phi-4-multimodal-instruct (phi4mm)
+
+cambrian-8b (out of memory)
+
+
+------------------------------------------------------------
+
+python evaluate_results.py --result results_qwen3vl_8b.jsonl --output_dir eval_qwen3vl_8b
+
+========== Overall ==========
+       model_result_file  total  correct  accuracy  invalid_prediction
+results_qwen3vl_8b.jsonl   2660     1377    0.5177                   0
+
+========== Accuracy by task group ==========
+       task_group  total  correct  accuracy
+   behavior_count   1140      671    0.5886
+behavior_presence   1140      684    0.6000
+      total_count    380       22    0.0579
+
+========== Accuracy by question type ==========
+    question_type  total  correct  accuracy
+   drinking_count    380      242    0.6368
+drinking_presence    380      242    0.6368
+    feeding_count    380      182    0.4789
+ feeding_presence    380      192    0.5053
+   perching_count    380      247    0.6500
+perching_presence    380      250    0.6579
+      total_count    380       22    0.0579
+
+========== Accuracy by behavior ==========
+behavior  total  correct  accuracy
+     all    380       22    0.0579
+drinking    760      484    0.6368
+ feeding    760      374    0.4921
+perching    760      497    0.6539
+
+========== Accuracy by task group and behavior ==========
+       task_group behavior  total  correct  accuracy
+   behavior_count drinking    380      242    0.6368
+   behavior_count  feeding    380      182    0.4789
+   behavior_count perching    380      247    0.6500
+behavior_presence drinking    380      242    0.6368
+behavior_presence  feeding    380      192    0.5053
+behavior_presence perching    380      250    0.6579
+      total_count      all    380       22    0.0579
+
+========== Count-task accuracy by gt_count bin ==========
+    task_group gt_count_bin  total  correct  accuracy
+behavior_count            0    735      613    0.8340
+behavior_count            1    272       26    0.0956
+behavior_count            2     83        7    0.0843
+behavior_count            3     34       15    0.4412
+behavior_count          >=4     16       10    0.6250
+   total_count            0      1        1    1.0000
+   total_count          >=4    379       21    0.0554
+
+Saved all evaluation files to: eval_qwen3vl_8b
+
+
+---------------------------------------------------------------------------------------------
+
+python evaluate_results.py --result results_qwen25vl_7b.jsonl --output_dir eval_qwen25vl_7b
+Warning: duplicated ids detected. Kept last occurrence: 2852 -> 2660
+
+========== Overall ==========
+        model_result_file  total  correct  accuracy  invalid_prediction
+results_qwen25vl_7b.jsonl   2660     1111    0.4177                   0
+
+========== Accuracy by task group ==========
+       task_group  total  correct  accuracy
+   behavior_count   1140      476    0.4175
+behavior_presence   1140      619    0.5430
+      total_count    380       16    0.0421
+
+========== Accuracy by question type ==========
+    question_type  total  correct  accuracy
+   drinking_count    380      160    0.4211
+drinking_presence    380      222    0.5842
+    feeding_count    380      104    0.2737
+ feeding_presence    380      193    0.5079
+   perching_count    380      212    0.5579
+perching_presence    380      204    0.5368
+      total_count    380       16    0.0421
+
+========== Accuracy by behavior ==========
+behavior  total  correct  accuracy
+     all    380       16    0.0421
+drinking    760      382    0.5026
+ feeding    760      297    0.3908
+perching    760      416    0.5474
+
+========== Accuracy by task group and behavior ==========
+       task_group behavior  total  correct  accuracy
+   behavior_count drinking    380      160    0.4211
+   behavior_count  feeding    380      104    0.2737
+   behavior_count perching    380      212    0.5579
+behavior_presence drinking    380      222    0.5842
+behavior_presence  feeding    380      193    0.5079
+behavior_presence perching    380      204    0.5368
+      total_count      all    380       16    0.0421
+
+========== Count-task accuracy by gt_count bin ==========
+    task_group gt_count_bin  total  correct  accuracy
+behavior_count            0    735      391    0.5320
+behavior_count            1    272       49    0.1801
+behavior_count            2     83        6    0.0723
+behavior_count            3     34       18    0.5294
+behavior_count          >=4     16       12    0.7500
+   total_count            0      1        1    1.0000
+   total_count          >=4    379       15    0.0396
+
+Saved all evaluation files to: eval_qwen25vl_7b
+
+
+---------------------------------------------------------------------------------------------
+
+python evaluate_results.py --result results_llava_onevision_7b.jsonl --output_dir eval_llava_onevision_7b
+
+========== Overall ==========
+               model_result_file  total  correct  accuracy  invalid_prediction
+results_llava_onevision_7b.jsonl   2660     1514    0.5692                   0
+
+========== Accuracy by task group ==========
+       task_group  total  correct  accuracy
+   behavior_count   1140      645    0.5658
+behavior_presence   1140      799    0.7009
+      total_count    380       70    0.1842
+
+========== Accuracy by question type ==========
+    question_type  total  correct  accuracy
+   drinking_count    380      221    0.5816
+drinking_presence    380      252    0.6632
+    feeding_count    380      201    0.5289
+ feeding_presence    380      300    0.7895
+   perching_count    380      223    0.5868
+perching_presence    380      247    0.6500
+      total_count    380       70    0.1842
+
+========== Accuracy by behavior ==========
+behavior  total  correct  accuracy
+     all    380       70    0.1842
+drinking    760      473    0.6224
+ feeding    760      501    0.6592
+perching    760      470    0.6184
+
+========== Accuracy by task group and behavior ==========
+       task_group behavior  total  correct  accuracy
+   behavior_count drinking    380      221    0.5816
+   behavior_count  feeding    380      201    0.5289
+   behavior_count perching    380      223    0.5868
+behavior_presence drinking    380      252    0.6632
+behavior_presence  feeding    380      300    0.7895
+behavior_presence perching    380      247    0.6500
+      total_count      all    380       70    0.1842
+
+========== Count-task accuracy by gt_count bin ==========
+    task_group gt_count_bin  total  correct  accuracy
+behavior_count            0    735      598    0.8136
+behavior_count            1    272       22    0.0809
+behavior_count            2     83        2    0.0241
+behavior_count            3     34       13    0.3824
+behavior_count          >=4     16       10    0.6250
+   total_count            0      1        1    1.0000
+   total_count          >=4    379       69    0.1821
+
+Saved all evaluation files to: eval_llava_onevision_7b
+
+---------------------------------------------------------------------------------------------
+
+python evaluate_results.py --result results_internvl25_8b.jsonl --output_dir eval_internvl25_8b
+
+========== Overall ==========
+          model_result_file  total  correct  accuracy  invalid_prediction
+results_internvl25_8b.jsonl   2660     1359    0.5109                   0
+
+========== Accuracy by task group ==========
+       task_group  total  correct  accuracy
+   behavior_count   1140      630    0.5526
+behavior_presence   1140      661    0.5798
+      total_count    380       68    0.1789
+
+========== Accuracy by question type ==========
+    question_type  total  correct  accuracy
+   drinking_count    380      172    0.4526
+drinking_presence    380      197    0.5184
+    feeding_count    380      218    0.5737
+ feeding_presence    380      223    0.5868
+   perching_count    380      240    0.6316
+perching_presence    380      241    0.6342
+      total_count    380       68    0.1789
+
+========== Accuracy by behavior ==========
+behavior  total  correct  accuracy
+     all    380       68    0.1789
+drinking    760      369    0.4855
+ feeding    760      441    0.5803
+perching    760      481    0.6329
+
+========== Accuracy by task group and behavior ==========
+       task_group behavior  total  correct  accuracy
+   behavior_count drinking    380      172    0.4526
+   behavior_count  feeding    380      218    0.5737
+   behavior_count perching    380      240    0.6316
+behavior_presence drinking    380      197    0.5184
+behavior_presence  feeding    380      223    0.5868
+behavior_presence perching    380      241    0.6342
+      total_count      all    380       68    0.1789
+
+========== Count-task accuracy by gt_count bin ==========
+    task_group gt_count_bin  total  correct  accuracy
+behavior_count            0    735      584    0.7946
+behavior_count            1    272       28    0.1029
+behavior_count            2     83        8    0.0964
+behavior_count            3     34        3    0.0882
+behavior_count          >=4     16        7    0.4375
+   total_count            0      1        1    1.0000
+   total_count          >=4    379       67    0.1768
+
+Saved all evaluation files to: eval_internvl25_8b
+
+---------------------------------------------------------------------------------------------
+
+python evaluate_results.py --result resluts_internvl35_8b.jsonl --output_dir eval_internvl35_8b
+
+========== Overall ==========
+          model_result_file  total  correct  accuracy  invalid_prediction
+resluts_internvl35_8b.jsonl   2660     1367    0.5139                   0
+
+========== Accuracy by task group ==========
+       task_group  total  correct  accuracy
+   behavior_count   1140      668    0.5860
+behavior_presence   1140      675    0.5921
+      total_count    380       24    0.0632
+
+========== Accuracy by question type ==========
+    question_type  total  correct  accuracy
+   drinking_count    380      206    0.5421
+drinking_presence    380      219    0.5763
+    feeding_count    380      219    0.5763
+ feeding_presence    380      214    0.5632
+   perching_count    380      243    0.6395
+perching_presence    380      242    0.6368
+      total_count    380       24    0.0632
+
+========== Accuracy by behavior ==========
+behavior  total  correct  accuracy
+     all    380       24    0.0632
+drinking    760      425    0.5592
+ feeding    760      433    0.5697
+perching    760      485    0.6382
+
+========== Accuracy by task group and behavior ==========
+       task_group behavior  total  correct  accuracy
+   behavior_count drinking    380      206    0.5421
+   behavior_count  feeding    380      219    0.5763
+   behavior_count perching    380      243    0.6395
+behavior_presence drinking    380      219    0.5763
+behavior_presence  feeding    380      214    0.5632
+behavior_presence perching    380      242    0.6368
+      total_count      all    380       24    0.0632
+
+========== Count-task accuracy by gt_count bin ==========
+    task_group gt_count_bin  total  correct  accuracy
+behavior_count            0    735      622    0.8463
+behavior_count            1    272       42    0.1544
+behavior_count            2     83        3    0.0361
+behavior_count            3     34        0    0.0000
+behavior_count          >=4     16        1    0.0625
+   total_count            0      1        1    1.0000
+   total_count          >=4    379       23    0.0607
+
+Saved all evaluation files to: eval_internvl35_8b
+
+---------------------------------------------------------------------------------------------
+
+python evaluate_results.py --result results_minicpm_v26.jsonl --output_dir eval_minicpm_v26
+
+========== Overall ==========
+        model_result_file  total  correct  accuracy  invalid_prediction
+results_minicpm_v26.jsonl   2660     1465    0.5508                   0
+
+========== Accuracy by task group ==========
+       task_group  total  correct  accuracy
+   behavior_count   1140      696    0.6105
+behavior_presence   1140      753    0.6605
+      total_count    380       16    0.0421
+
+========== Accuracy by question type ==========
+    question_type  total  correct  accuracy
+   drinking_count    380      233    0.6132
+drinking_presence    380      263    0.6921
+    feeding_count    380      220    0.5789
+ feeding_presence    380      245    0.6447
+   perching_count    380      243    0.6395
+perching_presence    380      245    0.6447
+      total_count    380       16    0.0421
+
+========== Accuracy by behavior ==========
+behavior  total  correct  accuracy
+     all    380       16    0.0421
+drinking    760      496    0.6526
+ feeding    760      465    0.6118
+perching    760      488    0.6421
+
+========== Accuracy by task group and behavior ==========
+       task_group behavior  total  correct  accuracy
+   behavior_count drinking    380      233    0.6132
+   behavior_count  feeding    380      220    0.5789
+   behavior_count perching    380      243    0.6395
+behavior_presence drinking    380      263    0.6921
+behavior_presence  feeding    380      245    0.6447
+behavior_presence perching    380      245    0.6447
+      total_count      all    380       16    0.0421
+
+========== Count-task accuracy by gt_count bin ==========
+    task_group gt_count_bin  total  correct  accuracy
+behavior_count            0    735      659    0.8966
+behavior_count            1    272       24    0.0882
+behavior_count            2     83        2    0.0241
+behavior_count            3     34        7    0.2059
+behavior_count          >=4     16        4    0.2500
+   total_count            0      1        1    1.0000
+   total_count          >=4    379       15    0.0396
+
+Saved all evaluation files to: eval_minicpm_v26
+
+---------------------------------------------------------------------------------------------
+
+python evaluate_results.py --result results_molmo_7b.jsonl --output_dir eval_molmo-7B
+
+========== Overall ==========
+     model_result_file  total  correct  accuracy  invalid_prediction
+results_molmo_7b.jsonl   2660      749    0.2816                   6
+
+========== Accuracy by task group ==========
+       task_group  total  correct  accuracy
+   behavior_count   1140      255    0.2237
+behavior_presence   1140      405    0.3553
+      total_count    380       89    0.2342
+
+========== Accuracy by question type ==========
+    question_type  total  correct  accuracy
+   drinking_count    380       81    0.2132
+drinking_presence    380      116    0.3053
+    feeding_count    380       84    0.2211
+ feeding_presence    380      154    0.4053
+   perching_count    380       90    0.2368
+perching_presence    380      135    0.3553
+      total_count    380       89    0.2342
+
+========== Accuracy by behavior ==========
+behavior  total  correct  accuracy
+     all    380       89    0.2342
+drinking    760      197    0.2592
+ feeding    760      238    0.3132
+perching    760      225    0.2961
+
+========== Accuracy by task group and behavior ==========
+       task_group behavior  total  correct  accuracy
+   behavior_count drinking    380       81    0.2132
+   behavior_count  feeding    380       84    0.2211
+   behavior_count perching    380       90    0.2368
+behavior_presence drinking    380      116    0.3053
+behavior_presence  feeding    380      154    0.4053
+behavior_presence perching    380      135    0.3553
+      total_count      all    380       89    0.2342
+
+========== Count-task accuracy by gt_count bin ==========
+    task_group gt_count_bin  total  correct  accuracy
+behavior_count            0    735      134    0.1823
+behavior_count            1    272       71    0.2610
+behavior_count            2     83       24    0.2892
+behavior_count            3     34       20    0.5882
+behavior_count          >=4     16        6    0.3750
+   total_count            0      1        0    0.0000
+   total_count          >=4    379       89    0.2348
+
+Saved all evaluation files to: eval_molmo-7B
+
+---------------------------------------------------------------------------------------------
+
+python evaluate_results.py --result results_ovis25_9b.jsonl --output_dir eval_ovis25_9b
+
+========== Overall ==========
+      model_result_file  total  correct  accuracy  invalid_prediction
+results_ovis25_9b.jsonl   2660     1021    0.3838                   0
+
+========== Accuracy by task group ==========
+       task_group  total  correct  accuracy
+   behavior_count   1140      503    0.4412
+behavior_presence   1140      511    0.4482
+      total_count    380        7    0.0184
+
+========== Accuracy by question type ==========
+    question_type  total  correct  accuracy
+   drinking_count    380      174    0.4579
+drinking_presence    380      182    0.4789
+    feeding_count    380       95    0.2500
+ feeding_presence    380      161    0.4237
+   perching_count    380      234    0.6158
+perching_presence    380      168    0.4421
+      total_count    380        7    0.0184
+
+========== Accuracy by behavior ==========
+behavior  total  correct  accuracy
+     all    380        7    0.0184
+drinking    760      356    0.4684
+ feeding    760      256    0.3368
+perching    760      402    0.5289
+
+========== Accuracy by task group and behavior ==========
+       task_group behavior  total  correct  accuracy
+   behavior_count drinking    380      174    0.4579
+   behavior_count  feeding    380       95    0.2500
+   behavior_count perching    380      234    0.6158
+behavior_presence drinking    380      182    0.4789
+behavior_presence  feeding    380      161    0.4237
+behavior_presence perching    380      168    0.4421
+      total_count      all    380        7    0.0184
+
+========== Count-task accuracy by gt_count bin ==========
+    task_group gt_count_bin  total  correct  accuracy
+behavior_count            0    735      416    0.5660
+behavior_count            1    272       47    0.1728
+behavior_count            2     83        8    0.0964
+behavior_count            3     34       21    0.6176
+behavior_count          >=4     16       11    0.6875
+   total_count            0      1        1    1.0000
+   total_count          >=4    379        6    0.0158
+
+Saved all evaluation files to: eval_ovis25_9b
+
+---------------------------------------------------------------------------------------------
+
+python evaluate_results.py --result test_glm41v_9b_thinking.jsonl --output_dir eval_glm41v_8b_thinking
+
+========== Overall ==========
+            model_result_file  total  correct  accuracy  invalid_prediction
+test_glm41v_9b_thinking.jsonl   2660      547    0.2056                 706
+
+========== Accuracy by task group ==========
+       task_group  total  correct  accuracy
+   behavior_count   1140      242    0.2123
+behavior_presence   1140      240    0.2105
+      total_count    380       65    0.1711
+
+========== Accuracy by question type ==========
+    question_type  total  correct  accuracy
+   drinking_count    380       90    0.2368
+drinking_presence    380      101    0.2658
+    feeding_count    380       73    0.1921
+ feeding_presence    380      103    0.2711
+   perching_count    380       79    0.2079
+perching_presence    380       36    0.0947
+      total_count    380       65    0.1711
+
+========== Accuracy by behavior ==========
+behavior  total  correct  accuracy
+     all    380       65    0.1711
+drinking    760      191    0.2513
+ feeding    760      176    0.2316
+perching    760      115    0.1513
+
+========== Accuracy by task group and behavior ==========
+       task_group behavior  total  correct  accuracy
+   behavior_count drinking    380       90    0.2368
+   behavior_count  feeding    380       73    0.1921
+   behavior_count perching    380       79    0.2079
+behavior_presence drinking    380      101    0.2658
+behavior_presence  feeding    380      103    0.2711
+behavior_presence perching    380       36    0.0947
+      total_count      all    380       65    0.1711
+
+========== Count-task accuracy by gt_count bin ==========
+    task_group gt_count_bin  total  correct  accuracy
+behavior_count            0    735      165    0.2245
+behavior_count            1    272       51    0.1875
+behavior_count            2     83       16    0.1928
+behavior_count            3     34        8    0.2353
+behavior_count          >=4     16        2    0.1250
+   total_count            0      1        0    0.0000
+   total_count          >=4    379       65    0.1715
+
+Saved all evaluation files to: eval_glm41v_8b_thinking
+
+---------------------------------------------------------------------------------------------
+
+python evaluate_results.py --result results_mimo_vl_7b_rl_2508.jsonl --output_dir eval_mimo_vl_7b_rl_2508
+
+========== Overall ==========
+               model_result_file  total  correct  accuracy  invalid_prediction
+results_mimo_vl_7b_rl_2508.jsonl   2660     1363    0.5124                   0
+
+========== Accuracy by task group ==========
+       task_group  total  correct  accuracy
+   behavior_count   1140      648    0.5684
+behavior_presence   1140      641    0.5623
+      total_count    380       74    0.1947
+
+========== Accuracy by question type ==========
+    question_type  total  correct  accuracy
+   drinking_count    380      234    0.6158
+drinking_presence    380      197    0.5184
+    feeding_count    380      198    0.5211
+ feeding_presence    380      198    0.5211
+   perching_count    380      216    0.5684
+perching_presence    380      246    0.6474
+      total_count    380       74    0.1947
+
+========== Accuracy by behavior ==========
+behavior  total  correct  accuracy
+     all    380       74    0.1947
+drinking    760      431    0.5671
+ feeding    760      396    0.5211
+perching    760      462    0.6079
+
+========== Accuracy by task group and behavior ==========
+       task_group behavior  total  correct  accuracy
+   behavior_count drinking    380      234    0.6158
+   behavior_count  feeding    380      198    0.5211
+   behavior_count perching    380      216    0.5684
+behavior_presence drinking    380      197    0.5184
+behavior_presence  feeding    380      198    0.5211
+behavior_presence perching    380      246    0.6474
+      total_count      all    380       74    0.1947
+
+========== Count-task accuracy by gt_count bin ==========
+    task_group gt_count_bin  total  correct  accuracy
+behavior_count            0    735      601    0.8177
+behavior_count            1    272       23    0.0846
+behavior_count            2     83        9    0.1084
+behavior_count            3     34        7    0.2059
+behavior_count          >=4     16        8    0.5000
+   total_count            0      1        1    1.0000
+   total_count          >=4    379       73    0.1926
+
+Saved all evaluation files to: eval_mimo_vl_7b_rl_2508
+
+---------------------------------------------------------------------------------------------
+
+python evaluate_results.py --result results_phi4mm.jsonl --output_dir eval_phi4mm
+
+========== Overall ==========
+   model_result_file  total  correct  accuracy  invalid_prediction
+results_phi4mm.jsonl   2660      781    0.2936                   0
+
+========== Accuracy by task group ==========
+       task_group  total  correct  accuracy
+   behavior_count   1140      289    0.2535
+behavior_presence   1140      405    0.3553
+      total_count    380       87    0.2289
+
+========== Accuracy by question type ==========
+    question_type  total  correct  accuracy
+   drinking_count    380       95    0.2500
+drinking_presence    380      116    0.3053
+    feeding_count    380       98    0.2579
+ feeding_presence    380      154    0.4053
+   perching_count    380       96    0.2526
+perching_presence    380      135    0.3553
+      total_count    380       87    0.2289
+
+========== Accuracy by behavior ==========
+behavior  total  correct  accuracy
+     all    380       87    0.2289
+drinking    760      211    0.2776
+ feeding    760      252    0.3316
+perching    760      231    0.3039
+
+========== Accuracy by task group and behavior ==========
+       task_group behavior  total  correct  accuracy
+   behavior_count drinking    380       95    0.2500
+   behavior_count  feeding    380       98    0.2579
+   behavior_count perching    380       96    0.2526
+behavior_presence drinking    380      116    0.3053
+behavior_presence  feeding    380      154    0.4053
+behavior_presence perching    380      135    0.3553
+      total_count      all    380       87    0.2289
+
+========== Count-task accuracy by gt_count bin ==========
+    task_group gt_count_bin  total  correct  accuracy
+behavior_count            0    735      196    0.2667
+behavior_count            1    272       61    0.2243
+behavior_count            2     83       21    0.2530
+behavior_count            3     34        8    0.2353
+behavior_count          >=4     16        3    0.1875
+   total_count            0      1        1    1.0000
+   total_count          >=4    379       86    0.2269
+
+Saved all evaluation files to: eval_phi4mm
